@@ -6,21 +6,74 @@
   padding: 0;
 }
 
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-PRO.TTF');
+    /* You can include other font properties if needed, like font-weight, font-style, etc. */
+}
+
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'SF Pro';
+    background-color: rgb(235, 235, 235);
 }
 
 .container-div {
     display: grid;
     width: 500px;
     height: 500px;
-    background-color: var(--secondary-light);
+    background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .column-div, .row-div {
     background-color: transparent;
+}
+
+.heading {
+    font-size: 64px;
+    margin: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.number-of-squares-btn, .clear-btn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.number-of-squares-btn:hover, .clear-btn:hover {
+    transform: scale(1.05);
+}
+
+.number-of-squares-btn {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+
+.btn-container {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.active {
+    background-color: rgb(34, 34, 34);
+    color: white;
 }
